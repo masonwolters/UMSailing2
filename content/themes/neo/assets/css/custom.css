@@ -25,6 +25,15 @@
 
 }
 
+.modalProfileImage {
+	width: 50%;
+	overflow: hidden;
+}
+
+.modalProfileImage img {
+	width: 100%;
+}
+
 .albumImage {
 	min-width: 100%;
 	min-height: 100%;
@@ -54,6 +63,13 @@
 	width: 100%;
 /*	height: 400px;
 */}
+
+.modal-header #closeButton {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
 
 .logo-container .logo {
 	line-height: 52px;
