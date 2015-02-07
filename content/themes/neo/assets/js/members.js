@@ -26,7 +26,6 @@ var PersonView = Backbone.View.extend({
 					</div>\
 			   	</div>\
 			   	<div class="modal-footer">\
-			   	hi\
 			   	</div>\
 			  </div\
 			</div>\
