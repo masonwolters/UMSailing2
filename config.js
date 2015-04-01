@@ -15,7 +15,7 @@ config = {
         database: {
             client: 'sqlite3',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                filename: path.join(__dirname, '/content/data/ghost-dev.db')
             },
             debug: false
         },
@@ -32,7 +32,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blogs published URL.
-        url: 'http://localhost:2368',
+        url: 'http://michigansailing.org',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
