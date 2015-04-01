@@ -49,7 +49,7 @@ registerHelpers = function() {
 		}
 	});
 	hbs.registerHelper('shouldShowPost', function(options) {
-		if (hasTag(this, "album") && hasTag(this, "show")) {
+		if (hasTag(this, "album") && !hasTag(this, "show")) {
 			return options.inverse(this);
 		} 
 		return options.fn(this);
