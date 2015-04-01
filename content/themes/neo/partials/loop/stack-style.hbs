@@ -1,7 +1,6 @@
 {{#contentFor "customBodyClass"}}loop-stack-style{{/contentFor}}
 <div class="post-list stack-style">    
     {{#foreach posts}}   
-    {{#shouldShowPost}}
     <section itemscope itemtype="http://schema.org/BlogPosting" role="article" {{#if @first}} id="start" {{/if}} {{#if @first}}data-author-name="{{author.name}}" data-author-img="{{author.image}}" data-author-bio="{{author.bio}}"{{/if}}>
         <div class="post-header">            
             <div class="header-wrap">
@@ -51,7 +50,6 @@
             </div>            
         </div>        
     </section>
-    {{/shouldShowPost}}
     {{/foreach}}
 </div>
 {{#if pagination}}
