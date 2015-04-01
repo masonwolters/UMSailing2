@@ -38,16 +38,6 @@
 	width: 100%;
 }
 
-.outImage {
-	display: inline-block;
-  	position: relative;
-  	width: 100%;
-}
-
-.dummyImage {
-	margin-top: 85%; /* 4:3 aspect ratio */
-}
-
 .inImage {
 /*	position: absolute;
    top: 0;
