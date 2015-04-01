@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://104.236.192.95',
+        url: 'http://michigansailing.org',
         mail: {},
         database: {
             client: 'sqlite3',
