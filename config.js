@@ -11,7 +11,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://michigansailing.org',
-        mail: {},
+        mail: {
+              transport: 'SMTP',
+              options: {
+                  service: 'Mailgun',
+                  auth: {
+                      user: 'postmaster@sandbox49703a4f0ef0496ea09f207df11b5b37.mailgun.org', // mailgun username
+                      pass: '5dcb8d4a2c37778806b422a2603fbfd6'  // mailgun password
+                  }
+              }
+          },
         database: {
             client: 'sqlite3',
             connection: {
