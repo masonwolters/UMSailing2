@@ -4,30 +4,21 @@ var PersonView = Backbone.View.extend({
 
 	template: _.template(
 		'\
-			<div class="modal-dialog">\
-			  <div class="modal-content">\
-			    <div class="modal-header">\
-		    		<img src="<%= person.image %>">\
-			    	<button id="closeButton" type="button" class="close"><i class="fa fa-times"></i></button>\
-			    </div>\
-			    <div class="modal-body">\
-				    <h3 style="margin-left: 15px;"><%= person.name %></h3>\
-			    	<div class="col-sm-6">\
-			    		<label>Year</label>\
-			    		<p><%= person.year %></p>\
-			    	</div>\
-			    	<div class="col-sm-6">\
-			    		<label>Major</label>\
-			    		<p><%= person.major%></p>\
-			    	</div\
-					<div class="col-sm-6">\
-						<label style="margin-left: 15px;">Bio</label>\
-						<p style="margin-left: 15px; margin-right: 15px;"><%= person.bio %></p>\
-					</div>\
-			   	</div>\
-			   	<div class="modal-footer">\
-			   	</div>\
-			  </div\
+			<div class="modal-dialog modal-lg">\
+				<div class="modal-content">\
+				 	<div class="modal-header">\
+				 	</div>\
+				 	<div class="modal-body">\
+				 		<div class="col-sm-6">\
+					 		<img src="<%= person.image %>">\
+				 		</div>\
+				 		<div class="col-sm-6">\
+				 		Hi\
+				 		</div>\
+				 	</div>\
+				 	<div class="modal-footer">\
+				 	</div>\
+			 	</div>\
 			</div>\
 		'
 	),

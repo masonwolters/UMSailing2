@@ -33,6 +33,16 @@ registerHelpers = function() {
 		// 	return options.inverse(this);
 		// }
 	});
+	hbs.registerHelper('isAlbumPage', function(options) {
+		if (this.tag.name == "album") {
+			return options.fn(this);
+		} else {
+			return options.inverse(this);
+		}
+	});
+	hbs.registerHelper('shouldShowPost', function(options) {
+		return options.fn(this);
+	});
 	hbs.registerHelper('isMembersPage', function(options) {
 		for (var i = 0; i < this.tags.length; i++) {
 			if (this.tags[i].name == 'teamMembers') {
