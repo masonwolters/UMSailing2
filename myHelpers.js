@@ -2,6 +2,15 @@ var hbs = require("express-hbs");
 var members = require("./content/members.json");
 var _ = require('lodash');
 
+function hasTag(post, tag) {
+	for (var i = 0; i < post.tags.length; i++) {
+		if (post.tags[i].name == tag) {
+			return true;
+		}
+	}
+	return false;
+}
+
 registerHelpers = function() {
 	String.prototype.startsWith = function(prefix) {
     return this.indexOf(prefix) === 0;
@@ -21,7 +30,6 @@ registerHelpers = function() {
 	});
 	hbs.registerHelper('isPhotoAlbum', function(options) {
 		for (var i = 0; i < this.tags.length; i++) {
-			console.log('COMPARE: '+this.tags[i].name+'; TO: album');
 			if (this.tags[i].name == 'album') {
 				return options.fn(this);
 			}
@@ -41,6 +49,9 @@ registerHelpers = function() {
 		}
 	});
 	hbs.registerHelper('shouldShowPost', function(options) {
+		if (hasTag(this, "album") && hasTag(this, "show")) {
+			return options.inverse(this);
+		} 
 		return options.fn(this);
 	});
 	hbs.registerHelper('isMembersPage', function(options) {
