@@ -1,3 +1,7 @@
+.body-content {
+	width: 100%;
+}
+
 .intro .intro-wrap .intro-wrap-inner .welcome-text h1{
 	font-size: 48px;
 	font-weight: 700;	
@@ -32,6 +36,30 @@
 
 .modalProfileImage img {
 	width: 100%;
+}
+
+.outImage {
+	display: inline-block;
+   position: relative;
+   width: 100%;
+}
+
+.dummyImage {
+	margin-top: 85%; /* 4:3 aspect ratio */
+}
+
+.inImage {
+	position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   overflow: hidden;
+}
+
+.inImage img {
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .albumImage {
