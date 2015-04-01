@@ -2,8 +2,12 @@
 	<div class="intro-wrap">
 		<div class="intro-wrap-inner">
 			<div class="welcome-text">
+				{{#isAlbumPage}}
+					<h1>Photos</h1>
+				{{else}}
 				<h1>{{tag.name}}</h1>
 				<h3>{{plural pagination.total empty='No Post' singular='Discover % Post' plural='Discover % Posts'}} with &#8220;{{tag.name}}&#8221; Tag.</h3>
+				{{/isAlbumPage}}
 			</div>
 		</div>
 	</div>
