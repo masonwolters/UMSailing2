@@ -7,7 +7,7 @@
 
 	<div class="profileContainer">
 	<a class="fancybox-thumb" rel="fancybox-thumb" href="{{image}}"><img class="profilePicture" src="{{image}}"/></a>
-	{{bio}}
+	{{{bio}}}
 	</div><br/><br>
 {{/eachEB}}
 
@@ -24,7 +24,7 @@
 	<tbody>
 		{{#eachPerson}}
 			<tr class="membersRow" data-pid="{{id}}">
-				<td><a class="memberName" style="cursor: pointer" data-json='{{#stringify this}}{{/stringify}}'>{{name}}</a></td>
+				<td><!-- <a class="memberName" style="cursor: pointer" data-json='{{#stringify this}}{{/stringify}}'> -->{{name}}<!-- </a> --></td>
 				<td><div>{{year}}</div></td>
 				<td><div>{{major}}</div></td>
 			</tr>
