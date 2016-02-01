@@ -24,7 +24,12 @@
 	<tbody>
 		{{#eachPerson}}
 			<tr class="membersRow" data-pid="{{id}}">
-				<td><!-- <a class="memberName" style="cursor: pointer" data-json='{{#stringify this}}{{/stringify}}'> --><a href="{{icsa}}" target="_blank">{{name}}</a><!-- </a> --></td>
+				{{#if icsa}}
+					<td><a href="{{icsa}}" target="_blank" style="color: #fece00">{{name}}</a></td>
+				{{else}}
+					<td>{{name}}</td>
+				{{/if}}
+				<!-- <a class="memberName" style="cursor: pointer" data-json='{{#stringify this}}{{/stringify}}'> -->
 				<td><div>{{year}}</div></td>
 				<td><div>{{major}}</div></td>
 			</tr>
