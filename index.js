@@ -39,7 +39,7 @@ parentApp.get('/directory-remove', function(req, res) {
 	py.stdout.on('data', function(data){ output += data });
 	py.on('close', function(code) {
 		if (code != 0) {
-			return res.send(500, code);
+			return res.send(500, 'Python error: ' + code);
 		}
 		return res.send(output);
 	})
