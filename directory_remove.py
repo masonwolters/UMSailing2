@@ -15,7 +15,7 @@ display.start()
 
 # driver = webdriver.Firefox()
 # chromedriver = os.path.dirname(os.path.abspath(__file__)) + '/chromedriver'
-driver = webdriver.Firefox()
+driver = webdriver.Firefox(capabilities={"marionette": False})
 driver.implicitly_wait(15)
 
 # driver.get("https://mcommunity.umich.edu/#group/members:Sailing%20Recruits")
