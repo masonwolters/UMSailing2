@@ -31,37 +31,25 @@ parentApp.get('/directory-remove', function(req, res) {
 	}
 	
 	var uniqnames = req.query.uniqnames.split(',');
-
-	var spawn = require('child_process').spawn;
-	var py = spawn('python', ['directory_remove.py', 'karliekloss', 'alexisren']);
-
-	var output = "";
-	py.stdout.on('data', function(data){ output += data });
-	py.on('close', function(code) {
-		if (code != 0) {
-			return res.send(500, 'Python error: ' + code);
-		}
-		return res.send(output);
-	})
 	
-	// var pyOptions = {
-	// 	args: uniqnames
-	// };
+	var pyOptions = {
+		args: uniqnames
+	};
 
-	// var pyshell = new PythonShell('directory_remove.py', pyOptions);
+	var pyshell = new PythonShell('directory_remove.py', pyOptions);
 
-	// var string = "";
-	// pyshell.on('message', function(message) {
-	// 	string += message;
-	// });
+	var string = "";
+	pyshell.on('message', function(message) {
+		string += message;
+	});
 
-	// pyshell.end(function(err) {
-	// 	if (err) {
-	// 		res.send(err);
-	// 	} else {
-	// 		res.send(string);
-	// 	}
-	// });
+	pyshell.end(function(err) {
+		if (err) {
+			res.send(err);
+		} else {
+			res.send(string);
+		}
+	});
 });
 
 ghost().then(function (ghostServer) {
